@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JavaBindings", "JavaBindings", "{6D1EB064-5A85-4F67-95BF-0146D4A11626}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{6F76B571-FA63-433F-9700-B7C3339F9D76}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MvvmCross", "MvvmCross", "{0CF19BD6-367C-4A77-8EDA-F7960AC91E4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Bindings.AdvancedRecylerView", "Xamarin.Bindings.AdvancedRecylerView\Xamarin.Bindings.AdvancedRecylerView.csproj", "{6925069A-BCDE-4404-963B-09926619800F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6925069A-BCDE-4404-963B-09926619800F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6925069A-BCDE-4404-963B-09926619800F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6925069A-BCDE-4404-963B-09926619800F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6925069A-BCDE-4404-963B-09926619800F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6925069A-BCDE-4404-963B-09926619800F} = {6D1EB064-5A85-4F67-95BF-0146D4A11626}
+	EndGlobalSection
+EndGlobal
