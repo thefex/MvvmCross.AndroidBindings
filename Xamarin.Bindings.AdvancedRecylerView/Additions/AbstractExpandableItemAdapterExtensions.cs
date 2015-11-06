@@ -8,7 +8,7 @@ namespace Com.H6ah4i.Android.Widget.Advrecyclerview.Utils
 
         // Metadata.xml XPath method reference: path="/api/package[@name='com.h6ah4i.android.widget.advrecyclerview.expandable']/interface[@name='ExpandableItemAdapter']/method[@name='onCreateChildViewHolder' and count(parameter)=2 and parameter[1][@type='android.view.ViewGroup'] and parameter[2][@type='int']]"
         [Register("onCreateChildViewHolder", "(Landroid/view/ViewGroup;I)Landroid/support/v7/widget/RecyclerView$ViewHolder;", "GetOnCreateChildViewHolder_Landroid_view_ViewGroup_IHandler:Com.H6ah4i.Android.Widget.Advrecyclerview.Expandable.IExpandableItemAdapterInvoker, Xamarin.Bindings.AdvancedRecyclerView")]
-        public abstract global::Java.Lang.Object OnCreateChildViewHolder(global::Android.Views.ViewGroup p0, int p1);
+        public abstract global::Java.Lang.Object OnCreateChildViewHolder(global::Android.Views.ViewGroup p0, int viewTypeWhichInFactIsResourceId);
 
         // Metadata.xml XPath method reference: path="/api/package[@name='com.h6ah4i.android.widget.advrecyclerview.expandable']/interface[@name='ExpandableItemAdapter']/method[@name='onCreateGroupViewHolder' and count(parameter)=2 and parameter[1][@type='android.view.ViewGroup'] and parameter[2][@type='int']]"
         [Register("onCreateGroupViewHolder", "(Landroid/view/ViewGroup;I)Landroid/support/v7/widget/RecyclerView$ViewHolder;", "GetOnCreateGroupViewHolder_Landroid_view_ViewGroup_IHandler:Com.H6ah4i.Android.Widget.Advrecyclerview.Expandable.IExpandableItemAdapterInvoker, Xamarin.Bindings.AdvancedRecyclerView")]

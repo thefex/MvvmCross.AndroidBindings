@@ -254,7 +254,7 @@ namespace Com.H6ah4i.Android.Widget.Advrecyclerview.Utils
 
         // Metadata.xml XPath method reference: path="/api/package[@name='com.h6ah4i.android.widget.advrecyclerview.utils']/class[@name='AbstractExpandableItemAdapter']/method[@name='getChildCount' and count(parameter)=1 and parameter[1][@type='int']]"
         [Register("getChildCount", "(I)I", "GetGetChildCount_IHandler")]
-        public abstract int GetChildCount(int p0);
+        public abstract int GetChildCount(int groupIndex);
 
         static Delegate cb_getChildId_II;
 #pragma warning disable 0169
@@ -274,7 +274,7 @@ namespace Com.H6ah4i.Android.Widget.Advrecyclerview.Utils
 
         // Metadata.xml XPath method reference: path="/api/package[@name='com.h6ah4i.android.widget.advrecyclerview.utils']/class[@name='AbstractExpandableItemAdapter']/method[@name='getChildId' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]"
         [Register("getChildId", "(II)J", "GetGetChildId_IIHandler")]
-        public abstract long GetChildId(int p0, int p1);
+        public abstract long GetChildId(int groupIndex, int childIndex);
 
         static Delegate cb_getChildItemViewType_II;
 #pragma warning disable 0169
@@ -294,7 +294,7 @@ namespace Com.H6ah4i.Android.Widget.Advrecyclerview.Utils
 
         // Metadata.xml XPath method reference: path="/api/package[@name='com.h6ah4i.android.widget.advrecyclerview.utils']/class[@name='AbstractExpandableItemAdapter']/method[@name='getChildItemViewType' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]"
         [Register("getChildItemViewType", "(II)I", "GetGetChildItemViewType_IIHandler")]
-        public abstract int GetChildItemViewType(int p0, int p1);
+        public abstract int GetChildItemViewType(int groupIndex, int childIndex);
 
         static Delegate cb_getGroupId_I;
 #pragma warning disable 0169
@@ -393,14 +393,14 @@ namespace Com.H6ah4i.Android.Widget.Advrecyclerview.Utils
         static IntPtr id_getChildCount_I;
         // Metadata.xml XPath method reference: path="/api/package[@name='com.h6ah4i.android.widget.advrecyclerview.utils']/class[@name='AbstractExpandableItemAdapter']/method[@name='getChildCount' and count(parameter)=1 and parameter[1][@type='int']]"
         [Register("getChildCount", "(I)I", "GetGetChildCount_IHandler")]
-        public override unsafe int GetChildCount(int p0)
+        public override unsafe int GetChildCount(int groupIndex)
         {
             if (id_getChildCount_I == IntPtr.Zero)
                 id_getChildCount_I = JNIEnv.GetMethodID(class_ref, "getChildCount", "(I)I");
             try
             {
                 JValue* __args = stackalloc JValue[1];
-                __args[0] = new JValue(p0);
+                __args[0] = new JValue(groupIndex);
                 return JNIEnv.CallIntMethod(Handle, id_getChildCount_I, __args);
             }
             finally
@@ -411,15 +411,15 @@ namespace Com.H6ah4i.Android.Widget.Advrecyclerview.Utils
         static IntPtr id_getChildId_II;
         // Metadata.xml XPath method reference: path="/api/package[@name='com.h6ah4i.android.widget.advrecyclerview.utils']/class[@name='AbstractExpandableItemAdapter']/method[@name='getChildId' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]"
         [Register("getChildId", "(II)J", "GetGetChildId_IIHandler")]
-        public override unsafe long GetChildId(int p0, int p1)
+        public override unsafe long GetChildId(int groupIndex, int childIndex)
         {
             if (id_getChildId_II == IntPtr.Zero)
                 id_getChildId_II = JNIEnv.GetMethodID(class_ref, "getChildId", "(II)J");
             try
             {
                 JValue* __args = stackalloc JValue[2];
-                __args[0] = new JValue(p0);
-                __args[1] = new JValue(p1);
+                __args[0] = new JValue(groupIndex);
+                __args[1] = new JValue(childIndex);
                 return JNIEnv.CallLongMethod(Handle, id_getChildId_II, __args);
             }
             finally
@@ -430,15 +430,15 @@ namespace Com.H6ah4i.Android.Widget.Advrecyclerview.Utils
         static IntPtr id_getChildItemViewType_II;
         // Metadata.xml XPath method reference: path="/api/package[@name='com.h6ah4i.android.widget.advrecyclerview.utils']/class[@name='AbstractExpandableItemAdapter']/method[@name='getChildItemViewType' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]"
         [Register("getChildItemViewType", "(II)I", "GetGetChildItemViewType_IIHandler")]
-        public override unsafe int GetChildItemViewType(int p0, int p1)
+        public override unsafe int GetChildItemViewType(int groupIndex, int childIndex)
         {
             if (id_getChildItemViewType_II == IntPtr.Zero)
                 id_getChildItemViewType_II = JNIEnv.GetMethodID(class_ref, "getChildItemViewType", "(II)I");
             try
             {
                 JValue* __args = stackalloc JValue[2];
-                __args[0] = new JValue(p0);
-                __args[1] = new JValue(p1);
+                __args[0] = new JValue(groupIndex);
+                __args[1] = new JValue(childIndex);
                 return JNIEnv.CallIntMethod(Handle, id_getChildItemViewType_II, __args);
             }
             finally
